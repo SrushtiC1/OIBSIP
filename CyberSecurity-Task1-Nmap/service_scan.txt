@@ -1,0 +1,16 @@
+# Nmap 7.991 scan initiated Sun Oct 11 15:20:26 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -sV -oN service_scan.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0011s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE SERVICE         VERSION
+135/tcp  open  msrpc           Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+902/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp  open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+8000/tcp open  http-alt        Splunkd
+8089/tcp open  unknown
+8194/tcp open  ssl/sophos?
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 11 15:20:41 2026 -- 1 IP address (1 host up) scanned in 15.01 seconds

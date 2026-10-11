@@ -1,0 +1,114 @@
+================================================================================
+          OASIS INFOBYTE CYBER SECURITY INTERNSHIP - TASK REPORT
+         TASK 1: BASIC NETWORK SCANNING WITH NMAP - ASSESSMENT REPORT
+================================================================================
+
+1. PROJECT & ASSESSMENT DETAILS
+--------------------------------------------------------------------------------
+Internship Organization : OASIS INFOBYTE (OIBSIP)
+Track                   : Cyber Security
+Task Number             : Level 1 - Task 1
+Task Title              : Basic Network Scanning with Nmap
+Report Author           : [PLACEHOLDER: Insert Your Full Name]
+Date of Scan            : [PLACEHOLDER: Insert Date of Scan, e.g., YYYY-MM-DD]
+Scanner Operating System: [PLACEHOLDER: e.g., Kali Linux 2024.x (VM)]
+Scanner IP Address      : [PLACEHOLDER: e.g., 192.168.56.102 / Private Lab IP]
+Target Operating System : [PLACEHOLDER: e.g., Ubuntu Server 22.04 / Metasploitable 2]
+Target IP Address       : [PLACEHOLDER: Insert Target VM Private IP, e.g., 192.168.56.101]
+Target Scope & Ownership: [CONFIRMED: Authorized Local Virtual Machine within Isolated Lab]
+Authorization Statement : Testing strictly authorized for educational internship evaluation
+                          in a private host-only/NAT network segment. No public or
+                          external networks were scanned.
+
+--------------------------------------------------------------------------------
+2. EXACT COMMANDS EXECUTED
+--------------------------------------------------------------------------------
+Command 1 (Basic TCP Port Scan):
+  nmap [TARGET_IP] -oN basic_scan.txt
+
+Command 2 (Service Version Detection Scan):
+  nmap -sV [TARGET_IP] -oN service_scan.txt
+
+Command 3 (Operating System Detection Scan):
+  sudo nmap -O [TARGET_IP] -oN os_scan.txt
+
+--------------------------------------------------------------------------------
+3. RAW SCAN OUTPUT: 1. BASIC SCAN (basic_scan.txt)
+--------------------------------------------------------------------------------
+[PLACEHOLDER: COPY AND PASTE THE COMPLETE OUTPUT OF basic_scan.txt BELOW THIS LINE]
+
+Starting Nmap ...
+[Paste full raw terminal output here once the scan has been executed on your VM]
+
+--------------------------------------------------------------------------------
+4. RAW SCAN OUTPUT: 2. SERVICE VERSION SCAN (service_scan.txt)
+--------------------------------------------------------------------------------
+[PLACEHOLDER: COPY AND PASTE THE COMPLETE OUTPUT OF service_scan.txt BELOW THIS LINE]
+
+Starting Nmap ...
+[Paste full raw terminal output here once the scan has been executed on your VM]
+
+--------------------------------------------------------------------------------
+5. RAW SCAN OUTPUT: 3. OPERATING SYSTEM SCAN (os_scan.txt)
+--------------------------------------------------------------------------------
+[PLACEHOLDER: COPY AND PASTE THE COMPLETE OUTPUT OF os_scan.txt BELOW THIS LINE]
+
+Starting Nmap ...
+[Paste full raw terminal output here once the scan has been executed on your VM]
+
+--------------------------------------------------------------------------------
+6. PORT & SERVICE ANALYSIS TABLE
+--------------------------------------------------------------------------------
+[INSTRUCTION: Populate the table rows below with the actual open ports uncovered
+during your service scan. Never invent fictional results.]
+
++------+----------+----------+-----------------------+------------------------------------+-------------------------------------------+-----------------------------------------------+
+| PORT | PROTOCOL | SERVICE  | DETECTED VERSION      | INTENDED PURPOSE                   | SECURITY CONSIDERATION                    | RECOMMENDED MITIGATION                        |
++------+----------+----------+-----------------------+------------------------------------+-------------------------------------------+-----------------------------------------------+
+| [EX] | TCP      | SSH      | OpenSSH 8.2p1 Ubuntu  | Secure Remote Administration       | Password brute forcing, credential leaks  | Enforce key auth, disable root login, fail2ban|
+| ---- | -------- | -------- | --------------------- | ---------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| [P1] | [TCP/UDP]| [Service]| [Version from scan]   | [Purpose of this service]          | [Potential risk associated with service]  | [Hardening action or firewall rule]           |
+| [P2] | [TCP/UDP]| [Service]| [Version from scan]   | [Purpose of this service]          | [Potential risk associated with service]  | [Hardening action or firewall rule]           |
+| [P3] | [TCP/UDP]| [Service]| [Version from scan]   | [Purpose of this service]          | [Potential risk associated with service]  | [Hardening action or firewall rule]           |
+| [P4] | [TCP/UDP]| [Service]| [Version from scan]   | [Purpose of this service]          | [Potential risk associated with service]  | [Hardening action or firewall rule]           |
++------+----------+----------+-----------------------+------------------------------------+-------------------------------------------+-----------------------------------------------+
+
+--------------------------------------------------------------------------------
+7. SUMMARY OF FINDINGS
+--------------------------------------------------------------------------------
+[PLACEHOLDER: Summarize the findings from your scan once executed]
+- Total Open TCP Ports Identified : [PLACEHOLDER: e.g., 4 open ports]
+- Primary Services Detected       : [PLACEHOLDER: e.g., SSH, HTTP, MySQL]
+- OS Detection Result             : [PLACEHOLDER: e.g., Linux 5.4.x (96% confidence) or Inconclusive]
+- Key Security Assessment         : [PLACEHOLDER: e.g., Several management services are exposed without
+                                     firewall restrictions. Version enumeration reveals unpatched packages.]
+
+--------------------------------------------------------------------------------
+8. SCAN LIMITATIONS & DEFENSIVE IMPLICATIONS
+--------------------------------------------------------------------------------
+During this assessment, the following technical limitations were observed:
+1. Port Coverage: The standard scan evaluates the top 1,000 TCP ports. Non-standard
+   ports (outside the top 1,000) or UDP services remain un-enumerated unless full-range
+   (-p-) or UDP (-sU) scans are performed.
+2. Firewall / Filtering: If host-based packet filters (e.g., iptables, UFW) are enabled
+   or configured to drop packets silently, ports will appear as 'filtered' rather
+   than 'open' or 'closed'.
+3. OS Detection Heuristics: OS detection relies on TCP/IP stack behavior fingerprinting.
+   If NAT or intermediate virtualization layers rewrite packet headers, detection
+   accuracy can vary or report multiple candidate kernels.
+4. Vulnerability Inference: Identifying an open port confirms communication readiness,
+   not an exploitable vulnerability. A full assessment requires authenticated configuration
+   review and dedicated vulnerability auditing tools.
+
+--------------------------------------------------------------------------------
+9. CONCLUSION
+--------------------------------------------------------------------------------
+[PLACEHOLDER: Insert your concluding remarks on the assessment]
+Network reconnaissance using Nmap provides indispensable visibility into a target system's
+exposed footprint. By identifying listening daemons and software builds, administrators can
+eliminate unnecessary services, enforce network filtering, and ensure timely patching before
+vulnerabilities can be exploited by unauthorized parties.
+
+================================================================================
+END OF SCAN ASSESSMENT REPORT
+================================================================================
