@@ -1,0 +1,43 @@
+# ==============================================================================
+# OASIS INFOBYTE CYBER SECURITY INTERNSHIP - TASK 2
+# EVIDENCE FILE: UFW RULES STATUS OUTPUT
+# ==============================================================================
+# STATUS: PLACEHOLDER (PENDING LAB EXECUTION ON KALI LINUX VM)
+# ==============================================================================
+#
+# INSTRUCTIONS FOR CAPTURING AUTHENTIC TERMINAL OUTPUT:
+# ------------------------------------------------------------------------------
+# 1. Open the terminal inside your Kali Linux VM in VMware.
+# 2. Execute the configuration script:
+#      chmod +x ufw_configuration.sh
+#      sudo ./ufw_configuration.sh
+#
+# 3. Capture and save the live verbose output of your active firewall:
+#      sudo ufw status verbose | tee ufw_rules_output.txt
+#
+# 4. Replace the contents of this file with the actual output generated on your system.
+#
+# NOTICE:
+# In accordance with academic integrity guidelines, authentic terminal output
+# must never be fabricated. The section below illustrates the EXPECTED schema
+# of what the output will look like once executed on your machine:
+#
+# ------------------------------------------------------------------------------
+# [SAMPLE EXPECTED SCHEMA FOR REFERENCE ONLY]
+# ------------------------------------------------------------------------------
+# Status: active
+# Logging: on (low)
+# Default: deny (incoming), allow (outgoing), disabled (routed)
+# New profiles: skip
+#
+# To                         Action      From
+# --                         ------      ----
+# 22/tcp                     ALLOW IN    Anywhere                   # Allow incoming SSH
+# 80/tcp                     DENY IN     Anywhere                   # Deny incoming HTTP
+# 443/tcp                    ALLOW IN    Anywhere                   # Allow incoming HTTPS
+# 23/tcp                     DENY IN     Anywhere                   # Deny incoming Telnet
+# 22/tcp (v6)                ALLOW IN    Anywhere (v6)              # Allow incoming SSH
+# 80/tcp (v6)                DENY IN     Anywhere (v6)              # Deny incoming HTTP
+# 443/tcp (v6)               ALLOW IN    Anywhere (v6)              # Allow incoming HTTPS
+# 23/tcp (v6)                DENY IN     Anywhere (v6)              # Deny incoming Telnet
+# ==============================================================================
